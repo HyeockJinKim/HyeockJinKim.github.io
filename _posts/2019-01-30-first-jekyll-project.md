@@ -13,12 +13,12 @@ github.io를 사용해서 vue.js로 블로그를 올려보려 했다.
 
 그동안 공부했던 자료와 개발했던 것들 경험들을 분류하여 정리할 계획이다.  
 
-{% mermaid %}
+```mermaid
 graph TD;
     A-->B;
     A-->C;
     B-->D;
     C-->D;
-{% endmermaid %}
+```
 
 [stack_edit_page]: https://stackedit.io/app#

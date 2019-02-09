@@ -10,8 +10,15 @@ Jekyll에서 plugin으로 [jekyll-mermaid][jekyll_mermaid_link]가 있어서 플
 
 Jekyll과 gem을 안 써봤어서 조금 난해했는데 그래도 적용하는데 성공했다.
 
-### 적용 순서
+## Mermaid 설정
+jekyll의 mermaid를 적용하는 방법은 두가지가 있다. 이 두가지를 알아보자.
+만일 mermaid의 색상을 조정하고 싶다면 `mermaid.js`의 색상을 검색해서 교체하여 수정할 수 있다.
+* plugin을 설치해서 적용하는 방법
+* script를 추가하는 방법
 
+
+### 적용 순서
+#### plugin을 설치하는 방법
 1. [Mermaid][mermaid_link]를 설치하고 build한다.
     ```bash
     git clone https://github.com/knsv/mermaid
@@ -50,9 +57,37 @@ Jekyll과 gem을 안 써봤어서 조금 난해했는데 그래도 적용하는�
     gem install jekyll-mermaid
     ```
 
-### 적용 결과
+#### Script를 추가하는 방법
+1. 아래의 코드를 mermaid를 사용할 layout의 head에 추가한다.
+```HTML
+  <script src="{{ "/js/mermaid.js" }}"></script>
+```
 
+2. 아래의 코드를 mermaid를 사용할 layout의 html에 추가한다.
+    * theme는 default, forest, dark, neutral가 있다.
+
+```HTML
+  <script>
+    var config = {
+      startOnLoad:true,
+      theme: 'neutral',
+      flowchart:{
+        useMaxWidth:false,
+        htmlLabels:true
+      }
+    };
+    mermaid.initialize(config);
+    window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+  </script>
+```
+
+*Github page로 사용할 경우 plugin 추가가 불가능하기 때문에 Script추가를 사용하는 것이 간단함*
+
+---
+
+### 적용 결과
 --------------------------------
+
 
 #### Sequence Diagram
 > 순서대로 진행되는 과정을 보여주기 좋음
@@ -69,7 +104,7 @@ Bob-->Alice: Checking with John...
 Alice->John: Yes... John, how are you?
 ```
 
-{% mermaid %}
+```mermaid
 sequenceDiagram
 Alice ->> Bob: Hello Bob, how are you?
 Bob-->>John: How about you John?
@@ -79,7 +114,7 @@ Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text d
 
 Bob-->Alice: Checking with John...
 Alice->John: Yes... John, how are you?
-{% endmermaid %}
+```
 
 --------------------------------
 
@@ -95,13 +130,13 @@ B --> D{Rhombus}
 C --> D
 ```
 
-{% mermaid %}
+```mermaid
 graph LR
 A[Square Rect] -- Link text --> B((Circle))
 A --> C(Round Rect)
 B --> D{Rhombus}
 C --> D
-{% endmermaid %}
+```
 
 ```md
 graph TD
@@ -111,13 +146,13 @@ B --> D{Rhombus}
 C --> D
 ```
 
-{% mermaid %}
+```mermaid
 graph TD
 A[Square Rect] -- Link text --> B((Circle))
 A --> C(Round Rect)
 B --> D{Rhombus}
 C --> D
-{% endmermaid %}
+```
 
 --------------------------------
 
@@ -136,7 +171,7 @@ Future task               :         des3, after des2, 5d
 Future task2               :         des4, after des3, 5d
 ```
 
-{% mermaid %}
+```mermaid
 gantt
 dateFormat  YYYY-MM-DD
 title Adding GANTT diagram to mermaid
@@ -146,7 +181,7 @@ Completed task            :done,    des1, 2014-01-06,2014-01-08
 Active task               :active,  des2, 2014-01-09, 3d
 Future task               :         des3, after des2, 5d
 Future task2               :         des4, after des3, 5d
-{% endmermaid %}
+```
 
 --------------------------------
 
@@ -170,7 +205,7 @@ Class01 : int gorilla
 Class08 <--> C2: Cool label
 ```
 
-{% mermaid %}
+```mermaid
 classDiagram
 Class01 <|-- AveryLongClass : Cool
 Class03 *-- Class04
@@ -185,7 +220,7 @@ Class01 : size()
 Class01 : int chimp
 Class01 : int gorilla
 Class08 <--> C2: Cool label
-{% endmermaid %}
+```
 
 --------------------------------
 
@@ -210,7 +245,8 @@ commit
 commit
 merge newbranch
 ```
-{% mermaid %}
+
+```mermaid
 gitGraph:
 options
 {
@@ -227,7 +263,7 @@ checkout master
 commit
 commit
 merge newbranch
-{% endmermaid %}
+```
 
 [mermaid_link]: https://github.com/knsv/mermaid
 [jekyll_mermaid_link]: https://rubygems.org/gems/jekyll-mermaid/versions/1.0.0
