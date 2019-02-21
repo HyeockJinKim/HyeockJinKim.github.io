@@ -1,0 +1,43 @@
+<div class="modal" onclick="set_hidden_modal()">
+    <div class="modal-content">
+        <div id="about-contents" class="content">
+            <a class="content-header" href="/about"><h2>About</h2></a>
+            <hr>
+            <div>
+                {{ site.html_pages[1].content }}
+            </div>
+        </div>
+        <div id="category-contents" class="content">
+            <a class="content-header" href="/category"><h2>Category</h2></a>
+            <hr>
+            <ul>
+                {% for category in site.categories  %}
+                <li class="list-view">
+                    <div>
+                        <h3>{{ category[0] }}</h3>
+                        {% for content in category[1] %}
+                            <p>{{ content.title }}</p>
+                        {% endfor %}
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div id="tag-contents" class="content">
+            <a class="content-header" href="/tag"><h2>Tag</h2></a>
+            <hr>
+            <ul>
+                {% for tag in site.tags  %}
+                <li class="list-view">
+                    <div>
+                        <h3>{{ tag[0] }}</h3>
+                        <p>{{ tag[1][0].title }}</p>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+
+</div>

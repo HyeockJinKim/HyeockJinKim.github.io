@@ -28,6 +28,14 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Setting for Paginating
+paginate: 5
+
+
+# Additional page
+category_page: category/
+tag_page: tag/
+
 sass:
   style: compressed
 # Exclude from processing.

@@ -16,14 +16,17 @@
           </span>
         </label>
 
-        <div class="trigger">
-          {%- for path in page_paths -%}
-            {%- assign my_page = site.pages | where: "path", path | first -%}
-            {%- if my_page.title -%}
-            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-            {%- endif -%}
-          {%- endfor -%}
-        </div>
+        <span class="page-link" onclick="view_modal('about-contents')">About</span>
+        <span class="page-link" onclick="view_modal('category-contents')">Category</span>
+        <span class="page-link" onclick="view_modal('tag-contents')">Tag</span>
+        <!--<div class="trigger">-->
+          <!--{%- for path in page_paths -%}-->
+            <!--{%- assign my_page = site.pages | where: "path", path | first -%}-->
+            <!--{%- if my_page.title -%}-->
+            <!--&lt;!&ndash;<span class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</span>&ndash;&gt;-->
+            <!--{%- endif -%}-->
+          <!--{%- endfor -%}-->
+        <!--</div>-->
       </nav>
     {%- endif -%}
   </div>
