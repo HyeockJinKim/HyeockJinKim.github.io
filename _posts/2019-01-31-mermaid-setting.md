@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "mermaid 설정"
+title: "mermaid plugin 설정"
 date:  2019-01-31 14:00:00 +0900
 categories: web
 tags: [jekyll, mermaid]

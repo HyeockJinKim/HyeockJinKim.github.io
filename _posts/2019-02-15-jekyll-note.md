@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Jekyll Note"
+title:  "Jekyll 정리"
 date:   2019-02-15 00:21:30 +0900
-categories: [web, boo, BOV]
-tags: [jekyll, a, c]
+categories: [web]
+tags: [jekyll]
 ---
 
 

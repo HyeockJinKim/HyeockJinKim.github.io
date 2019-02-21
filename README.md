@@ -1,2 +1,3 @@
-# HyeockJinKim.github.io
-github page 
+# My Github Pages
+
+This page was created by Jekyll.
