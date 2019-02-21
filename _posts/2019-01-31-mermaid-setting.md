@@ -2,7 +2,8 @@
 layout: post
 title: "mermaid 설정"
 date:  2019-01-31 14:00:00 +0900
-categories: jekyll update
+categories: web
+tags: [jekyll, mermaid]
 ---
 ## Mermaid 설정 완료
 [Mermaid][mermaid_link]라는 markdown에서 Diagram을 그리는데 좋은 프로젝트가 있길래 적용시켜보았다.
