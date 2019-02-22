@@ -18,7 +18,7 @@ function set_visible_modal() {
 function set_hidden_modal() {
     const content = document.getElementsByClassName("modal-content")[0]
     content.style.transform = 'translate(0px, 0px)'
-    setTimeout(remove_contents, 600)
+    setTimeout(remove_contents, 350)
 }
 
 function remove_contents() {

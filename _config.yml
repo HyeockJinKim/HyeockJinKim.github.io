@@ -16,9 +16,9 @@
 title: Hyeockz
 email: kherootz@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  HyeockJin's blog
+  HyeockJin's Dev blog
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://127.0.0.1:4000" # the _layouts hostname & protocol for your site, e.g. http://example.com
+url: "http://HyeockJinKim.github.io" # the _layouts hostname & protocol for your site, e.g. http://example.com
 
 github_username: HyeockJinKim
 

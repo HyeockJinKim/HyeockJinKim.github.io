@@ -110,16 +110,17 @@ p {
  * Links
  */
 a {
-  color: $brand-color;
+  color: lighten($a-tag-color, 25%);
   text-decoration: none;
+  transition: color 500ms ease;
 
   &:visited {
-    color: darken($brand-color, 15%);
+    color: $a-tag-color;
   }
 
   &:hover {
-    color: $text-color;
-    text-decoration: underline;
+    color: $a-tag-color;
+    text-decoration: none;
   }
 
   .social-media-list &:hover {

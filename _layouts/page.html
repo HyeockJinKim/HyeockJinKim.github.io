@@ -1,11 +1,11 @@
 ---
 layout: default
 ---
-<article class="post">
+<article class="home">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
-  </header>
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
 
   <div class="post-content">
     {{ content }}
