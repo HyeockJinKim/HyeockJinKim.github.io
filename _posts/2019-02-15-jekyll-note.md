@@ -4,6 +4,7 @@ title:  "Jekyll 정리"
 date:   2019-02-15 00:21:30 +0900
 categories: [web]
 tags: [jekyll]
+liquid_example: "{{ name }}"
 ---
 
 
@@ -78,18 +79,23 @@ _sites 폴더에는 jekyll이 build되었을 때의 모든 정적페이지를 �
 assets는 javascript, css파일을 저장해두는 폴더로 assets로 굳이 두지 않더라도 되지만 관리를 용이하게 하기위해 폴더를 두어 관리한다. 보통 폴더의 이름은 images, css, js 와 같이 안에 들어있는 파일의 내용을 알 수 있게 한다.
 
 ### page
-page폴더에는 고정으로 받을 페이지를 지정할 수 있다. about.md와 같이 다른 폴더에 들어가지 않은 파일의 경우
-page폴더에 정리해두어 코드를 정리한다. 이 경우 permalink 라는 값을 front matter에 지정하여 어떤 url을
+page 폴더에는 고정으로 받을 페이지를 지정할 수 있다. about.md와 같이 다른 폴더에 들어가지 않은 파일의 경우
+page 폴더에 정리해두어 코드를 정리한다. 이 경우 permalink 라는 값을 front matter에 지정하여 어떤 url을
 입력받았을 때에 해당 페이지가 나오는지 지정할 수 있다.
 
 ## Liquid 태그
 
 Jekyll에서 사용하는 태그로 웹 개발을 해보았다면 장고나 vue.js 와 같은 곳에서도 보았을 법한 문법이다.
 ```markdown
-Hello, {{ name }}
+Hello, {{ page.liquid_example }}
 ```
+
 위와 같은 방식으로 name이라는 값을 HTML파일에 적는 것이 아닌 외부에서 값을 받아와 적게 되는 방식으로 사용한다. 값을 대입하는 것 외에도 if나 for문을 이용하여 화면에 반복되거나 보여지지 않을 화면을 정의할 수 있다.
 
+### Liquid 태그를 code 태그에 넣고 싶다면?
+참고로 위와 같이 liquid 태그를 code 태그 내에 넣고 싶다면 front matter의 variable에 liquid 태그를 적고
+code 태그 내에서 page.<variable_name>을 호출하여 liquid tag를 받아오게 해서 집어넣을 수 있다.
+단순히 code 태그 내에 liquid태그를 집어넣을 경우 liquid 태그가 변환되어 liquid 태그를 보일 수 없게 된다.
 
 
 > Written with [StackEdit](https://stackedit.io/).

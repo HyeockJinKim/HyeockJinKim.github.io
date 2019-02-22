@@ -60,14 +60,14 @@ jekyll의 mermaid를 적용하는 방법은 두가지가 있다. 이 두가지�
 
 #### Script를 추가하는 방법
 1. 아래의 코드를 mermaid를 사용할 layout의 head에 추가한다.
-```HTML
+```html
   <script src="{{ "/js/mermaid.js" }}"></script>
 ```
 
 2. 아래의 코드를 mermaid를 사용할 layout의 html에 추가한다.
     * theme는 default, forest, dark, neutral가 있다.
 
-```HTML
+```html
   <script>
     var config = {
       startOnLoad:true,
@@ -93,7 +93,7 @@ jekyll의 mermaid를 적용하는 방법은 두가지가 있다. 이 두가지�
 #### Sequence Diagram
 > 순서대로 진행되는 과정을 보여주기 좋음
 
-``` md
+``` markdown
 sequenceDiagram
 Alice ->> Bob: Hello Bob, how are you?
 Bob-->>John: How about you John?
@@ -123,7 +123,7 @@ Alice->John: Yes... John, how are you?
 > Flow Chart 용도
 > TD는 세로, LR은 가로
 
-```md
+```markdown
 graph LR
 A[Square Rect] -- Link text --> B((Circle))
 A --> C(Round Rect)
@@ -139,7 +139,7 @@ B --> D{Rhombus}
 C --> D
 ```
 
-```md
+```markdown
 graph TD
 A[Square Rect] -- Link text --> B((Circle))
 A --> C(Round Rect)
@@ -160,7 +160,7 @@ C --> D
 #### Gantt Diagram
 > Task 진행 순서를 보여주는 용도
 
-```md
+```markdown
 gantt
 dateFormat  YYYY-MM-DD
 title Adding GANTT diagram to mermaid
@@ -189,7 +189,7 @@ Future task2               :         des4, after des3, 5d
 #### Class Diagram
 > Class 다이어그램
 
-```md
+```markdown
 classDiagram
 Class01 <|-- AveryLongClass : Cool
 Class03 *-- Class04
@@ -228,7 +228,7 @@ Class08 <--> C2: Cool label
 #### Git Graph Diagram
 > git 순서를 보여주는 용도
 
-```md
+```markdown
 gitGraph:
 options
 {
