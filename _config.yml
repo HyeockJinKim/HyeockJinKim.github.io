@@ -22,6 +22,9 @@ url: "http://HyeockJinKim.github.io" # the _layouts hostname & protocol for your
 
 github_username: HyeockJinKim
 
+disqus:
+  shortname: "hyeockz"
+
 # Build settings
 markdown: kramdown
 theme: minima
