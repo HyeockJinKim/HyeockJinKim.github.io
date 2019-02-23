@@ -40,6 +40,11 @@
     color: $text-color;
     line-height: $base-line-height;
     cursor: pointer;
+    transition: text-shadow 500ms ease;
+
+    &:hover {
+      text-shadow: .05em .05em .05em rgba(0, 0, 0, 0.3);
+    }
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {

@@ -112,7 +112,7 @@ p {
 a {
   color: lighten($a-tag-color, 25%);
   text-decoration: none;
-  transition: color 500ms ease;
+  transition: text-shadow 500ms ease, color 500ms ease;
 
   &:visited {
     color: $a-tag-color;
@@ -121,14 +121,7 @@ a {
   &:hover {
     color: $a-tag-color;
     text-decoration: none;
-  }
-
-  .social-media-list &:hover {
-    text-decoration: none;
-
-    .username {
-      text-decoration: underline;
-    }
+    text-shadow: .05em .05em .05em rgba(0, 0, 0, 0.3);
   }
 }
 
