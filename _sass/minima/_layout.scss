@@ -243,7 +243,7 @@
   h2 {
     @include relative-font-size(1.75);
     font-weight: bold;
-    border-bottom: 2px solid #bebebe;
+    border-bottom: 2px solid #d1d1d1;
     padding: 0.2em 0.5em;
 
     @include media-query($on-laptop) {
@@ -253,7 +253,7 @@
 
   h3 {
     @include relative-font-size(1.4);
-    border-bottom: 1px solid #d2d2d2;
+    border-bottom: 1px solid #d1d1d1;
     padding: 0.2em 0.5em;
 
     @include media-query($on-laptop) {
@@ -263,10 +263,17 @@
 
   h4 {
     @include relative-font-size(1.125);
+    padding: 0.2em 0.5em;
+    font-weight: bold;
 
     @include media-query($on-laptop) {
       @include relative-font-size(1.125);
     }
+  }
+
+  hr {
+    margin: 1em 0;
+    border: 1px solid #d1d1d1;
   }
 
   p {
