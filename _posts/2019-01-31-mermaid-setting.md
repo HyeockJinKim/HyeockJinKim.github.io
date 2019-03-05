@@ -6,13 +6,13 @@ categories: web
 tags: [jekyll, mermaid]
 ---
 ## Mermaid 설정 완료
-[Mermaid][mermaid_link]라는 markdown에서 Diagram을 그리는데 좋은 프로젝트가 있길래 적용시켜보았다.
-Jekyll에서 plugin으로 [jekyll-mermaid][jekyll_mermaid_link]가 있어서 플러그인을 적용시켰다.
+[Mermaid][mermaid_link]라는 markdown에서 Diagram을 그리는데 좋은 프로젝트가 있길래 적용해보았다.
+Jekyll에서 plugin으로 [jekyll-mermaid][jekyll_mermaid_link]가 있어서 플러그인을 적용했다.
 
-Jekyll과 gem을 안 써봤어서 조금 난해했는데 그래도 적용하는데 성공했다.
+Jekyll과 gem을 안 써봐서 조금 난해했는데 그래도 적용하는 데 성공했다.
 
 ## Mermaid 설정
-jekyll의 mermaid를 적용하는 방법은 두가지가 있다. 이 두가지를 알아보자.
+jekyll의 mermaid를 적용하는 방법은 두 가지가 있다. 이 두 가지를 알아보자.
 만일 mermaid의 색상을 조정하고 싶다면 `mermaid.js`의 색상을 검색해서 교체하여 수정할 수 있다.
 * plugin을 설치해서 적용하는 방법
 * script를 추가하는 방법
