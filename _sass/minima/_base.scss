@@ -110,18 +110,15 @@ p {
  * Links
  */
 a {
-  color: lighten($a-tag-color, 25%);
+  color: $text-color;
   text-decoration: none;
-  transition: text-shadow 500ms ease, color 500ms ease;
 
   &:visited {
-    color: $a-tag-color;
+    color: $text-color;
   }
 
   &:hover {
-    color: $a-tag-color;
-    text-decoration: none;
-    text-shadow: .05em .05em .05em rgba(0, 0, 0, 0.3);
+    color: $text-color;
   }
 }
 

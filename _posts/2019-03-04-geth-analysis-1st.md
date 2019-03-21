@@ -6,8 +6,6 @@ categories: [Geth]
 tags: [Ethereum, go]
 ---
 
-## Go-Ethereum
-
 Go-Ethereum은 Go 언어로 만들어진 Ethereum protocol을 다루는 프로그램으로 Geth라고 줄여서 부르기도 합니다.
 Go 언어 외에도 python 언어로 만들어진 [pyethereum][pyethereum], Java 언어로 만들어진 [ethereumj][ethereumj],
 C++로 만들어진 [aleth][aleth]도 있습니다. 하지만 이 중 가장 많은 Star를 받고 주목받고 있는 것은

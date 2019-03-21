@@ -1,0 +1,14 @@
+<li class="post-item">
+    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+    <a href="{{ post.url | relative_url }}">
+        <h2 class="post-name">{{ post.title }}<span class="post-meta">{{ post.date | date: date_format }}</span></h2>
+        <p class="pre-content">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+    </a>
+    {%- for category in post.categories -%}
+    <span class="post-meta categories">{{ category }}</span>
+    {%- endfor -%}
+    {%- for tag in post.tags -%}
+    <span class="post-meta tags">{{ tag }}</span>
+    {%- endfor -%}
+
+</li>

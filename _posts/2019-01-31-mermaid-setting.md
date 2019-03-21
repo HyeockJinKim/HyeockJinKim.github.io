@@ -5,22 +5,20 @@ date:  2019-01-31 14:00:00 +0900
 categories: web
 tags: [jekyll, mermaid]
 ---
-## Mermaid 설정 완료
-[Mermaid][mermaid_link]라는 markdown에서 Diagram을 그리는데 좋은 프로젝트가 있길래 적용해보았다.
-Jekyll에서 plugin으로 [jekyll-mermaid][jekyll_mermaid_link]가 있어서 플러그인을 적용했다.
-
-Jekyll과 gem을 안 써봐서 조금 난해했는데 그래도 적용하는 데 성공했다.
+[Mermaid][mermaid_link]라는 mark down만으로 Diagram을 그리는데 좋은 프로젝트가 있길래 적용해보았습니다.
+처음에는 Jekyll에서 plugin으로 [jekyll-mermaid][jekyll_mermaid_link]가 있어서 플러그인을 적용했습니다.
+하지만 Github에서는 플러그인을 추가하는 것으로는 적용하기 어려워 스크립트를 추가하는 방법으로 적용하게 되었습니다.
+Jekyll과 gem을 안 써봐서 조금 난해했는데 그래도 적용하는 데 성공했습니다.
 
 ## Mermaid 설정
-jekyll의 mermaid를 적용하는 방법은 두 가지가 있다. 이 두 가지를 알아보자.
-만일 mermaid의 색상을 조정하고 싶다면 `mermaid.js`의 색상을 검색해서 교체하여 수정할 수 있다.
+jekyll의 mermaid를 적용하는 방법은 더 많을 수도 있겠지만 제가 찾은 방법은 2가지가 있습니다.
+그 방법은 아래와 같습니다.
 * plugin을 설치해서 적용하는 방법
 * script를 추가하는 방법
 
-
 ### 적용 순서
 #### plugin을 설치하는 방법
-1. [Mermaid][mermaid_link]를 설치하고 build한다.
+1. [Mermaid][mermaid_link]를 설치하고 build합니다.
     ```bash
     git clone https://github.com/knsv/mermaid
 
@@ -29,10 +27,10 @@ jekyll의 mermaid를 적용하는 방법은 두 가지가 있다. 이 두 가지
     yarn build
     ```
 
-2. Mermaid의 dist에 생선된 js파일을 jekyll 프로젝트로 옮긴다.
-    - 정리를 위해 js 폴더를 만들어 넣어둔다.
+2. Mermaid의 dist에 생성된 js파일을 jekyll 프로젝트로 옮깁니다.
+    - 정리를 위해 js 폴더를 만들어 넣어둡니다.
 
-3. jekyll의 `_config.yml`파일에 jekyll-mermaid 플러그인을 추가한다.
+3. jekyll의 `_config.yml`파일에 jekyll-mermaid 플러그인을 추가합니다.
 
    ```gem
     plugins:
@@ -44,7 +42,7 @@ jekyll의 mermaid를 적용하는 방법은 두 가지가 있다. 이 두 가지
       src: '<url>/<path>/mermaid.js'
    ```
 
-4. `GemFile`파일에 dependency를 추가한다.
+4. `GemFile`파일에 dependency를 추가합니다.
 
     ```gem
     group :jekyll_plugins do
@@ -53,19 +51,19 @@ jekyll의 mermaid를 적용하는 방법은 두 가지가 있다. 이 두 가지
     end
     ```
 
-5. gem으로 jekyll-mermaid를 install한다.
+5. gem으로 jekyll-mermaid를 install합니다.
     ```bash
     gem install jekyll-mermaid
     ```
 
 #### Script를 추가하는 방법
-1. 아래의 코드를 mermaid를 사용할 layout의 head에 추가한다.
+1. 아래의 코드를 mermaid를 사용할 layout의 head에 추가합니다.
 ```html
   <script src="{{ "/js/mermaid.js" }}"></script>
 ```
 
-2. 아래의 코드를 mermaid를 사용할 layout의 html에 추가한다.
-    * theme는 default, forest, dark, neutral가 있다.
+2. 아래의 코드를 mermaid를 사용할 layout의 html에 추가합니다.
+    * theme의 값으로는 default, forest, dark, neutral가 있습니다.
 
 ```html
   <script>
@@ -82,7 +80,9 @@ jekyll의 mermaid를 적용하는 방법은 두 가지가 있다. 이 두 가지
   </script>
 ```
 
-*Github page로 사용할 경우 plugin 추가가 불가능하기 때문에 Script추가를 사용하는 것이 간단함*
+> Github page로 사용할 경우 plugin 추가가 불가능하기 때문에 Script 추가를 사용합니다*
+>
+> 만일 mermaid의 색상을 조정하고 싶다면 `mermaid.js`의 색상 값을 수정하여 적용할 수 있습니다.
 
 ---
 
@@ -91,7 +91,7 @@ jekyll의 mermaid를 적용하는 방법은 두 가지가 있다. 이 두 가지
 
 
 #### Sequence Diagram
-> 순서대로 진행되는 과정을 보여주기 좋음
+> 순서대로 진행되는 과정을 보여주기 좋습니다.
 
 ``` markdown
 sequenceDiagram
@@ -265,6 +265,10 @@ commit
 commit
 merge newbranch
 ```
+
+
+이 모든 기능들을 다 사용할지는 모르겠지만 괜찮은 플러그인으로 보입니다.
+
 
 [mermaid_link]: https://github.com/knsv/mermaid
 [jekyll_mermaid_link]: https://rubygems.org/gems/jekyll-mermaid/versions/1.0.0

@@ -2,8 +2,9 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
+  background-color: $page-color;
   border-bottom: 1px solid $grey-color-light;
+  box-shadow: .05em .05em .1em rgba(0, 0, 0, 0.1);
   min-height: $spacing-unit * 1.865;
 
   // Positioning context for the mobile navigation icon
@@ -191,19 +192,46 @@
 }
 
 .post-list-heading {
-  @include relative-font-size(1.75);
+  @include relative-font-size(1.2);
+  display: block;
+  margin: .3em .5em;
+}
+
+/**
+ * Posts
+ */
+.post {
+  background: $page-color;
+  padding: 2em 6em;
 }
 
 .post-list {
   margin-left: 0;
+  padding: 1em 3em;
   list-style: none;
+  background-color: $page-color;
 
   > li {
     margin-bottom: $spacing-unit;
   }
+
+  h2 {
+    font-weight: bold;
+  }
+
+  hr {
+    border-color: rgba(109, 109, 109, 0.13);
+    margin: 2em 0;
+  }
+}
+
+.post-item {
+  padding: 0 1.5em;
 }
 
 .post-meta {
+  text-align: right;
+  margin: 3em .5em 1em 0;
   font-size: $small-font-size;
   color: $grey-color;
 }
@@ -213,11 +241,6 @@
   @include relative-font-size(1.5);
 }
 
-
-
-/**
- * Posts
- */
 .post-header {
   margin-bottom: $spacing-unit;
 }
@@ -227,10 +250,21 @@
   letter-spacing: -1px;
   line-height: 1;
   font-weight: bold;
+  margin: 1.8em .2em;
 
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
   }
+}
+
+.pre-content {
+  line-height: 1.8em;
+  color: rgba(11, 11, 11, 0.53);
+  font-size: 14px;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  max-height: 3.8em;
+  overflow: hidden;
 }
 
 .post-content {
@@ -322,6 +356,21 @@
   ul {
     margin-bottom: 1em;
     line-height: 1.7em;
+  }
+
+  a {
+    color: lighten($a-tag-color, 25%);
+    transition: text-shadow 500ms ease, color 500ms ease;
+
+    &:visited {
+      color: $a-tag-color;
+    }
+
+    &:hover {
+      color: $a-tag-color;
+      text-decoration: none;
+      text-shadow: .05em .05em .05em rgba(0, 0, 0, 0.3);
+    }
   }
 
   p {
