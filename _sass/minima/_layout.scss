@@ -25,6 +25,10 @@
   &:visited {
     color: $grey-color-dark;
   }
+
+  @include media-query($on-laptop) {
+    @include relative-font-size(1);
+  }
 }
 
 .site-nav {
@@ -226,7 +230,7 @@
 }
 
 .post-item {
-  padding: 0 1.5em;
+  padding: 0 5%;
 }
 
 .post-meta {
@@ -250,14 +254,14 @@
   letter-spacing: -1px;
   line-height: $spacing-unit * 1.865;
   font-weight: bold;
-  margin: 1.8em .2em;
+  margin: .2em;
   text-align: center;
   position: sticky;
   top: 0;
   z-index: 1;
 
   @include media-query($on-laptop) {
-    @include relative-font-size(2.25);
+    @include relative-font-size(.8);
   }
 }
 
