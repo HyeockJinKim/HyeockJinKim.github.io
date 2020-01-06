@@ -1,0 +1,17 @@
+<div id="category-contents" class="content">
+    <a class="content-header" href="/category"><h2>Category</h2></a>
+    <ul class="list-view">
+        {% for category in site.categories %}
+        <li>
+            <h3 class="tag-header">
+                <i class="category-icon fab fa-font-awesome"></i>{{ category[0] }}
+            </h3>
+            <ul class="list-view">
+                {% for post in category[1] %}
+                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

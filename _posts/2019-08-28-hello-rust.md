@@ -2,9 +2,9 @@
 layout: post
 title:  "Hello Rust"
 date:   2019-08-28 23:30:00 +0900
-categories: [Rust]
+categories: [Programming Language]
 author: 김혁진
-tags: [Rust]
+tags: [rust]
 ---
 
 `Rust`는 `Mozila`에서 만든 언어로 `C`, `C++`과 거의 비슷한 속도를 가지고 있지만 메모리 관리가 더 쉬워 속도가 중요한 프로젝트들에서 자주 사용되는 것을 볼 수 있습니다.

@@ -2,8 +2,8 @@
 layout: post
 title:  "자바의 멀티 스레드 프로그래밍 - 1번째"
 date:   2019-04-14 18:08:00 +0900
-categories: [java, multi-thread]
-tags: [thread, synchronization]
+categories: [Programming Language]
+tags: [java, thread]
 ---
 
 프로그래밍을 하다보면 속도가 중요해지는 경우가 있습니다. 시간이 오래 걸리는 작업을 할 때에는 하나의 thread만이 아닌

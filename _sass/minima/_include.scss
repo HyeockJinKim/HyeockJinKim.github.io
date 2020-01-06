@@ -10,21 +10,91 @@
   z-index: 2;
 
   .modal-content {
+    margin: 0;
     padding: 1em 3em 2em 3em;
     border-radius: 1em;
-    width: 20em;
-    margin: 0 auto;
-    background: #ffffff;
+
+    width: 0;
+    height: 0;
+
+    position: fixed; /* Stay in place */
+    text-align: center;
+
+    background: $page-color;
     box-shadow: 0 0 rgba(0, 0, 0, 0.7);
-    transform: translateY(0);
-    transition: transform 700ms ease;
+
+    // Centered
+    left:50% !important;
+    top:50% !important;
+    transform:translate(-50%, -50%) !important;
+    overflow: auto;
+
+    transition: width .5s, height .5s;
+    z-index: 3;
   }
+}
+
+.content-header {
+  color: #2a7ae2;
+  &:hover {
+    color: #4763e2;
+  }
+}
+
+.tag-header {
+  font-weight: bold;
 }
 
 .list-view {
   list-style: none;
+  text-align: left;
+
+
+  li>a {
+    color: lighten($a-tag-color, 25%);
+    transition: text-shadow 500ms ease, color 500ms ease;
+
+    &:visited {
+      color: $a-tag-color;
+    }
+
+    &:hover {
+      color: $a-tag-color;
+      text-decoration: none;
+      text-shadow: .05em .05em .05em rgba(0, 0, 0, 0.3);
+    }
+  }
+
+}
+
+.tag-posts {
+  overflow: auto;
+  max-height: 0;
+
+  transition: max-height .2s;
 }
 
 .content {
   display: none;
+}
+
+.description {
+  margin-left: 1rem;
+}
+
+.margin-right-1rem {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.tag-icon {
+  color: #63e982;
+  margin-right: .6rem;
+  line-height: 1em;
+}
+
+.category-icon {
+  color: #608fe9;
+  line-height: 1em;
+  margin-right: .6rem;
 }

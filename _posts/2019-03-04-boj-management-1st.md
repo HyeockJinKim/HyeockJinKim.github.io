@@ -2,7 +2,7 @@
 layout: post
 title:  "Python을 이용한 Boj 웹 사이트 파싱 1 번째"
 date:   2019-03-04 01:26:00 +0900
-categories: [Boj-management]
+categories: [My-Dev]
 tags: [python, parsing]
 ---
 

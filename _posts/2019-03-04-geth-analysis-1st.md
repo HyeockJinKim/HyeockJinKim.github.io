@@ -2,8 +2,8 @@
 layout: post
 title:  "Go-Ethereum 분석기 - 1번째"
 date:   2019-03-04 19:42:50 +0900
-categories: [Geth]
-tags: [Ethereum, go]
+categories: [BlockChain]
+tags: [ethereum, go]
 ---
 
 Go-Ethereum은 Go 언어로 만들어진 Ethereum protocol을 다루는 프로그램으로 Geth라고 줄여서 부르기도 합니다.

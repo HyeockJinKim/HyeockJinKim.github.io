@@ -2,7 +2,7 @@
 layout: post
 title:  "첫 Jekyll 프로젝트"
 date:   2019-01-30 20:16:38 +0900
-categories: [web]
+categories: [Web]
 author: Hyeock-Jin Kim
 tags: [jekyll]
 ---

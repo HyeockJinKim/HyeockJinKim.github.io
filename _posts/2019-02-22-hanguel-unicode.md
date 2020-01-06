@@ -2,7 +2,7 @@
 layout: post
 title:  "한글 Unicode 값 계산"
 date:   2019-02-22 01:23:00 +0900
-categories: [algorithm]
+categories: [Algorithm]
 tags: [Unicode, 한글]
 ---
 

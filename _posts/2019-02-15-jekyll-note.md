@@ -2,7 +2,7 @@
 layout: post
 title:  "Jekyll 정리"
 date:   2019-02-15 00:21:30 +0900
-categories: [web]
+categories: [Web]
 tags: [jekyll]
 liquid_example: "{{ name }}"
 ---

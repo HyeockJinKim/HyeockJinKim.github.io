@@ -1,45 +1,7 @@
 <div class="modal" onclick="set_hidden_modal()">
     <div class="modal-content">
-        <div id="about-contents" class="content">
-            <a class="content-header" href="/about"><h2>About</h2></a>
-            <hr>
-            <div>
-                {{ site.html_pages[1].content }}
-            </div>
-        </div>
-        <div id="category-contents" class="content">
-            <a class="content-header" href="/category"><h2>Category</h2></a>
-            <hr>
-            <ul class="list-view">
-                {% for category in site.categories %}
-                <li>
-                    <h3>{{ category[0] }}</h3>
-                    <ul class="list-view">
-                        {% for post in category[1] %}
-                        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </li>
-                {% endfor %}
-            </ul>
-
-        </div>
-        <div id="tag-contents" class="content">
-            <a class="content-header" href="/tag"><h2>Tag</h2></a>
-            <hr>
-            <ul class="list-view">
-                {% for tag in site.tags %}
-                <li><h3>{{ tag[0] }}</h3>
-                    <ul class="list-view">
-                        {% for post in tag[1] %}
-                        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </li>
-                {% endfor %}
-            </ul>
-
-        </div>
+        {% include components/about-modal.html %}
+        {% include components/category-modal.html %}
+        {% include components/tag-modal.html %}
     </div>
-
 </div>

@@ -2,7 +2,7 @@
 layout: post
 title: "mermaid plugin 설정"
 date:  2019-01-31 14:00:00 +0900
-categories: web
+categories: Web
 tags: [jekyll, mermaid]
 ---
 [Mermaid][mermaid_link]라는 mark down만으로 Diagram을 그리는데 좋은 프로젝트가 있길래 적용해보았습니다.
