@@ -3,6 +3,7 @@ layout: post
 title:  "Hello Rust"
 date:   2019-08-28 23:30:00 +0900
 categories: [Rust]
+author: 김혁진
 tags: [Rust]
 ---
 

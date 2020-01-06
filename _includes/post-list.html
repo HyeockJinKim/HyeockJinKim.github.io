@@ -1,0 +1,8 @@
+{%- if site.posts.size > 0 -%}
+<a href="/" class="post-list-heading">{{ page.list_title | default: "Posts" }}</a>
+<ul class="post-list">
+    {%- for post in site.posts -%}
+    {% include item.html %}
+    {%- endfor -%}
+</ul>
+{%- endif -%}

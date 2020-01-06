@@ -120,7 +120,7 @@
  */
 .site-footer {
   border-top: 1px solid $grey-color-light;
-  padding: $spacing-unit 0;
+  padding: 1rem 0 .5rem 0;
 }
 
 .footer-heading {
@@ -205,18 +205,23 @@
  * Posts
  */
 .post {
-  background: $page-color;
   padding: 2em 8%;
 }
 
-.post-list {
-  margin-left: 0;
-  padding: 1em 0;
-  list-style: none;
+.post-box {
   background-color: $page-color;
+  border-radius: .5rem;
+  box-shadow: 1px 1px .3rem rgba(80, 80, 80, 0.25);
+}
+
+.post-list {
+  list-style: none;
+  margin-left: 0;
 
   > li {
-    margin-bottom: $spacing-unit;
+    padding: .5rem 3rem 1.3rem 3rem;
+    margin: .3rem 0;
+    cursor: pointer;
   }
 
   h2 {
@@ -227,10 +232,6 @@
     border-color: rgba(109, 109, 109, 0.13);
     margin: 2em 0;
   }
-}
-
-.post-item {
-  padding: 0 5%;
 }
 
 .post-meta {
@@ -271,7 +272,7 @@
   font-size: 14px;
   text-overflow: ellipsis;
   word-wrap: break-word;
-  max-height: 3.8em;
+  max-height: 3.6em;
   overflow: hidden;
 }
 
@@ -409,8 +410,8 @@
   background-color: #bbe3ee;
   color: #2b47a3;
   padding: 0.2em 0.7em;
-  margin-left: 1em;
-  border-radius: 0.6em;
+  margin: 0 .5rem 0 0;
+  border-radius: 0.3rem;
   cursor: pointer;
 }
 
@@ -418,8 +419,8 @@
   background-color: #eee7c3;
   color: #9f9653;
   padding: 0.2em 0.7em;
-  margin-left: 1em;
-  border-radius: 0.6em;
+  margin: 0 .5rem 0 0;
+  border-radius: 0.3rem;
   cursor: pointer;
 }
 
