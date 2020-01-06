@@ -2,7 +2,7 @@
 <a href="/" class="post-list-heading">{{ page.list_title | default: "Posts" }}</a>
 <ul class="post-list">
     {%- for post in site.posts -%}
-    {% include item.html %}
+    {% include components/item.html %}
     {%- endfor -%}
 </ul>
 {%- endif -%}
