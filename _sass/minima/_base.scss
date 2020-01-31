@@ -29,6 +29,12 @@ body {
   flex-direction: column;
 }
 
+@include media-query($on-laptop) {
+  body {
+    font-size: $mobile-font-size;
+    line-height: $mobile-line-height;
+  }
+}
 
 
 /**
@@ -38,7 +44,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: $spacing-unit;
 }
 
 
@@ -143,7 +149,7 @@ blockquote {
  */
 pre,
 code {
-  @include relative-font-size(1.2);
+  @include relative-font-size(.98);
   border: 1px solid $grey-color-light;
   border-radius: 3px;
   background-color: $code-color;

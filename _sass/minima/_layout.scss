@@ -207,6 +207,17 @@
 .post {
   padding: 2em 8%;
 }
+@include media-query($on-laptop) {
+  .post {
+    padding: 2em 8%;
+  }
+}
+
+@include media-query($on-palm) {
+  .post {
+    padding: 2em 14px;
+  }
+}
 
 .post-box {
   background-color: $page-color;
@@ -262,9 +273,12 @@
   z-index: 1;
 
   @include media-query($on-laptop) {
-    @include relative-font-size(.8);
+    @include relative-font-size(1.2);
+    line-height: $spacing-unit * 1.865;
   }
 }
+
+
 
 .pre-content {
   line-height: 1.8em;
@@ -384,7 +398,7 @@
   }
 
   p {
-    line-height: 2em;
+    line-height: 23px;
   }
   /* For highlight css */
   &>div>div {
