@@ -223,6 +223,11 @@
   background-color: $page-color;
   border-radius: .5rem;
   box-shadow: 1px 1px .3rem rgba(80, 80, 80, 0.25);
+  transition: box-shadow 300ms;
+
+  &:hover {
+    box-shadow: 1px 1px 1rem rgba(80, 80, 80, 0.25);
+  }
 }
 
 .post-list {
