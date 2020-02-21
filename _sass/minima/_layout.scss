@@ -424,6 +424,16 @@
     display: block;
     margin: 0 auto;
   }
+
+  .MathJax_Display {
+    transform: translateX(60px);
+    font-size: 25px;
+    margin: 1rem auto;
+    @include media-query($on-palm) {
+      transform: translateX(30px);
+      font-size: 19px;
+    }
+  }
 }
 
 .categories {
