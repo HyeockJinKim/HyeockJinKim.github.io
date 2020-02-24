@@ -426,12 +426,20 @@
   }
 
   .MathJax_Display {
-    transform: translateX(60px);
-    font-size: 25px;
+    font-size: $latex-font-size;
     margin: 1rem auto;
     @include media-query($on-palm) {
-      transform: translateX(30px);
       font-size: 19px;
+    }
+
+    & > span > nobr > span > span > span {
+      position: relative !important;
+      clip: initial !important;
+      top: 0 !important;
+      left: 0 !important;
+      & > span {
+        height: $latex-font-size !important;
+      }
     }
   }
 }
