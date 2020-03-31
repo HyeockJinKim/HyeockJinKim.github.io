@@ -432,6 +432,14 @@
       font-size: $latex-font-size * .8;
     }
   }
+
+  .blob-num {
+    width: 10px !important;
+  }
+
+  .gist-data {
+    max-height: 500px;
+  }
 }
 
 .categories {
